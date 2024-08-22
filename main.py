@@ -186,4 +186,3 @@ def convert(amount:int, _from:str, _to:str):
             print('err')
     else:
         print('err with response: ', response.status_code)
- 
