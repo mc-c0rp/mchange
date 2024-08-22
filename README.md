@@ -11,7 +11,7 @@ python -m pip install mchange
 ```python
 import mchange
 
-converted = mchange.change(1, Currency.USD, Currency.MDL) # First - Quantity to be changed; Second - From; Third - To.
+converted = mchange.change(1, mchange.Currency.USD, mchange.Currency.MDL) # First - Quantity to be changed; Second - From; Third - To.
 print(converted)
 ```
 
