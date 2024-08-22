@@ -166,6 +166,11 @@ class Currency:
 
 
 def convert(amount:int, _from:str, _to:str):
+    '''
+    First - Value
+    Second - From
+    Third - To
+    '''
     url = f'https://www.xe.com/currencyconverter/convert/?Amount={amount}&From={_from}&To={_to}'
     response = requests.get(url)
     if response.status_code == 200:
@@ -176,7 +181,7 @@ def convert(amount:int, _from:str, _to:str):
         if element:
             text = element.get_text(strip=True)
             cur = int(text.split('.')[0].replace(',', ''))
-            print(cur)
+            return cur
         else:
             print('err')
     else:
